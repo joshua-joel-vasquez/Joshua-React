@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { HashLink } from 'react-router-hash-link';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -13,11 +14,14 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = [ "Full Stack Engineer", "Cloud Designer"  ];
   const period = 2000;
+  
 
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
     }, delta);
+
+
 
     return () => { clearInterval(ticker) };
   }, [text])
@@ -47,6 +51,8 @@ export const Banner = () => {
     }
   }
 
+  
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -57,8 +63,14 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Josh`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full Stack Engineer", "Cloud Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button  href="https://www.linkedin.com/in/joshua-vasquez-joel/" onClick={() => console.log('connect')} >Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <p>I'm a skilled Lead Software Engineer with a strong background in full-stack development and data analysis.
+                     Currently, I'm thriving in my role at Capgemini, where I serve as a Lead Software Engineer With over two years 
+                     of experience at Capgemini as a Full Stack Software Engineer prior to my current role, I've demonstrated my expertise 
+                     in revitalizing existing Java programs to Java 11, enhancing security measures, and optimizing performance. I've led teams 
+                     in updating SQL batch jobs, trained new employees, and validated tests while running dynamic and static vulnerability scans 
+                     on Microservices applications.</p>
+                  
+                 
               </div>}
             </TrackVisibility>
           </Col>
