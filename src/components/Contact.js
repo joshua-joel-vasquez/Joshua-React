@@ -62,8 +62,8 @@ export const Contact = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 
-                <h1>{`Email me at:`} <span className="txt-rotate" dataPeriod="1000" data-rotate='
-                [ "Full Stack Engineer", "Cloud Designer" ]'><span className="wrap">{text}</span></span></h1>
+                <h2>{`Email me at:`} <span className="txt-rotate" dataPeriod="1000" data-rotate='
+                [  ]'><br></br><span className="wrap">{text}</span></span></h2>
                   
                   
                  
